@@ -18,12 +18,14 @@ function Home() {
     }
   }, []);
 
+  // Array di servizi offerti
   const servizi = [
     { nome: "Taglio Classico", prezzo: "20€", icon: "✂️" },
     { nome: "Regolazione Barba", prezzo: "15€", icon: "🪒" },
     { nome: "Combo VIP", prezzo: "30€", icon: "👑" },
   ];
 
+  // galleria di tagli
   const gallery = [
     "https://res.cloudinary.com/dddnbcscx/image/upload/w_600,h_800,c_fill,g_auto,q_auto,f_auto/ar_3:4,c_auto/taglio2_hgpfx4.jpg",
     "https://res.cloudinary.com/dddnbcscx/image/upload/w_600,h_800,c_fill,g_auto,q_auto,f_auto/ar_3:4,c_auto/TAGLIO_vauveo.jpg",
