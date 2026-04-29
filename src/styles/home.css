@@ -1,0 +1,195 @@
+@import url("https://googleapis.com");
+
+:root {
+  --gold-primary: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #f9e27d 50%,
+    #b38728 100%
+  );
+  --gold-flat: #d4af37;
+  --black-deep: #000000;
+  --dark-grey: #121212;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--black-deep);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+h3.fw-bold {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+h1,
+h2,
+h5,
+.appuntamento-badge h6 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.text-gold {
+  color: var(--gold-flat);
+}
+
+/* Hero Section */
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/barbiere.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 85vh;
+}
+
+.cta-button {
+  background: var(--gold-primary) !important;
+  color: black !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.services-scroll,
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 15px;
+  padding: 0 0 20px 0;
+}
+
+.services-scroll::-webkit-scrollbar,
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Service Card */
+.service-card {
+  min-width: 180px;
+  height: 180px;
+  background-color: var(--dark-grey) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* Gallery Item - PC */
+.gallery-item {
+  min-width: 300px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    min-width: 180px;
+    scroll-snap-align: center;
+  }
+
+  .appuntamento-badge {
+    top: auto;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+.gallery-img-container {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-img-container:hover {
+  border-color: var(--gold-flat);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appuntamento-badge {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 2000;
+  height: auto;
+  width: auto;
+  max-width: 90vw;
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--gold-flat);
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: block;
+}
+
+.appuntamento-badge h6 {
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.appuntamento-badge p {
+  color: #ffffff;
+  opacity: 0.9;
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .appuntamento-badge {
+    top: auto;
+    bottom: 25px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+.pulsate-icon {
+  animation: pulse 2s infinite;
+  color: var(--gold-flat);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.border-gold {
+  border-left: 4px solid var(--gold-flat) !important;
+}

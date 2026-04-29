@@ -1,0 +1,113 @@
+/* --- CONTENITORE PRINCIPALE --- */
+.prenota-wrapper {
+  background-color: #000;
+}
+
+/* --- SELEZIONE SERVIZI E BARBIERI --- */
+.selection-card {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+  border: 1px solid #333;
+}
+
+.selection-card:hover {
+  border-color: #666;
+  transform: translateY(-3px);
+}
+
+.selection-card.active-border {
+  border: 2px solid #fff;
+  background-color: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+/* --- GRIGLIA ORARI --- */
+.grid-columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Contenitore e sfondo */
+.react-calendar.custom-ac-calendar {
+  background: #111;
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-family: inherit;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* Navigazione (Mese e Frecce) */
+.custom-ac-calendar .react-calendar__navigation {
+  background: transparent;
+  margin-bottom: 10px;
+}
+
+.custom-ac-calendar .react-calendar__navigation button {
+  color: #fff;
+  min-width: 44px;
+  background: none;
+  font-size: 1.1rem;
+}
+
+.custom-ac-calendar .react-calendar__navigation button:enabled:hover,
+.custom-ac-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: #222;
+  border-radius: 8px;
+}
+
+/* Giorni della settimana */
+.custom-ac-calendar .react-calendar__month-view__weekdays__weekday {
+  color: #666;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.custom-ac-calendar .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+  cursor: default;
+}
+
+/* I singoli giorni (Numeri) */
+.custom-ac-calendar .react-calendar__tile {
+  color: #fff;
+  background: none;
+  border-radius: 8px;
+  padding: 12px 5px;
+}
+
+/* Giorno selezionato (Target preciso per sovrascrivere la libreria) */
+.custom-ac-calendar .react-calendar__tile--active {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.custom-ac-calendar .react-calendar__tile--active:enabled:hover,
+.custom-ac-calendar .react-calendar__tile--active:enabled:focus {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Hover sui giorni normali */
+.custom-ac-calendar .react-calendar__tile:enabled:hover,
+.custom-ac-calendar .react-calendar__tile:enabled:focus {
+  background-color: #333;
+}
+
+/* Giorni disabilitati (Passati) */
+.custom-ac-calendar .react-calendar__tile:disabled {
+  background-color: transparent;
+  color: #333;
+}
+
+/* Giorno di oggi */
+.custom-ac-calendar .react-calendar__tile--now {
+  background: #222;
+  color: #fff;
+}
